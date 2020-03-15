@@ -15,7 +15,6 @@ import { BasicTableComponent } from "./basic-table/basic-table.component";
 import { MapsComponent } from "./maps/maps.component";
 import { TableFilteringComponent } from "./table-filtering/table-filtering.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
 //material imports
 
 import { MatCardModule } from "@angular/material/card";
@@ -35,7 +34,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatPaginatorModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { GoogleMapsModule } from "@angular/google-maps";
 
 // FIREBASE 
@@ -57,6 +56,7 @@ import { environment } from 'src/environments/environment';
     TableFilteringComponent
   ],
   imports: [
+    MatSlideToggleModule,
     MatPaginatorModule,
     AngularFirestoreModule,
     AngularFireDatabaseModule,

@@ -74,3 +74,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             font-size: 14px;
             width: 100%;
           }
+
+        .tool-bar {
+            border:2px solid greenyellow;
+            min-height: 40px
+        }
+        
+        .titulo {
+            border: 2px solid fuchsia
+        }
+        
+        .login-status {
+            font-size: 0.8rem;
+            border: 2px solid burlywood;
+        }

@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { MapInfoWindow } from '@angular/google-maps';
-
+import { MapInfoWindow, MapMarker, GoogleMap } from '@angular/google-maps'
 
 // just an interface for type safety.
 interface marker {
@@ -30,6 +29,8 @@ export class MapsComponent implements OnInit {
     minZoom: 8,
   }
   //map: any;
+  markers = [];
+  infoContent = '';
 
   constructor() { }
 
@@ -60,4 +61,29 @@ export class MapsComponent implements OnInit {
   zoomOut() {
     if (this.zoom > this.options.minZoom) this.zoom--
   }
+
+  addMarker() {
+    this.markers.push({
+      position: {
+        lat: this.center.lat + ((Math.random() - 0.5) * 2) / 10,
+        lng: this.center.lng + ((Math.random() - 0.5) * 2) / 10,
+      },
+      label: {
+        color: 'red',
+        text: 'Marker label ' + (this.markers.length + 1),
+      },
+      title: 'Marker title ' + (this.markers.length + 1),
+      info: 'Marker info ' + (this.markers.length + 1),
+      options: {
+        animation: google.maps.Animation.BOUNCE,
+      },
+    })
+  }
+  
+  openInfo(marker: MapMarker, content) {
+    this.infoContent = content
+    this.info.open(marker)
+  }
+
 }
+ 
