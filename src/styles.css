@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ /* .child-1{
+    background-color: orange;
+    min-height: 20rem;
+    }
+    .child-2{
+    background-color: yellow;
+    min-width: 20%;
+    }
+    .child-3{
+    background-color: green;
+    min-height: 10rem;
+    }
+    .child-nav{
+    background-color: greenyellow;
+    }
+    
+   
+
+    .containerNav{
+        margin: 15px;
+        border:2px solid red;
+       }
+
+
+
+       .container{
+    
+        border:2px solid red;
+       }
+
+    
+       .footer{
+        border:2px solid red;
+       }.child-footer{
+        background-color: hotpink;
+        }
+         */
+
+
+
+
+         .container{
+            border:2px solid red;
+            overflow: auto;
+            min-height: 20rem;
+           }
+
+        .top-container{
+            
+            border:2px solid blue;
+           }
+
+        .tabla-vuelos {
+            border: 2px solid green; 
+            overflow: auto;
+        }
+        
+    
+
+        .tabla-aviones {
+            border: 2px solid brown;
+        }
+
+        table {
+            width: 100%;
+          }
+          
+          .mat-form-field {
+            font-size: 14px;
+            width: 100%;
+          }

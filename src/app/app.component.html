@@ -1,0 +1,33 @@
+<!-- div container -->
+
+
+
+      
+<div class="top-container">
+  <mat-toolbar>
+  
+    <span>My Application Header</span>
+  </mat-toolbar>
+  <router-outlet>
+    <div class="container" fxLayout="row" fxLayoutGap="20px" fxFlexFill>
+      <!--  div table filtering column -->
+      <app-table-filtering class="tabla-vuelos" fxFlex="60"></app-table-filtering>
+
+      <div class="shit-container" fxLayout="column-reverse" fxLayoutAlign="space-around stretch" fxLayoutGap="20px" fxFlex >
+        <!-- div tablaa aviones +`google maps  -->
+
+        <app-basic-table class="tabla-aviones" > </app-basic-table>
+
+        <!-- mapa de google maps  -->
+        <app-maps></app-maps>
+      </div>
+    </div>
+  </router-outlet>
+  <mat-toolbar>
+    <span>My Application Footer</span>
+  </mat-toolbar>
+</div>
+
+
+
+
