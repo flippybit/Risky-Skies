@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { MatTableDataSource } from "@angular/material/table";
+import { MatPaginator } from "@angular/material";
 
 interface Country {
   name: string;
@@ -8,7 +9,7 @@ interface Country {
   population: number;
 }
 
-interface Aeropuerto {
+export interface Aeropuerto {
   num: number;
   pais: string;
   ciudad: string;
@@ -751,7 +752,7 @@ const COUNTRIES: Country[] = [
   templateUrl: "./basic-table.component.html",
   styleUrls: ["./basic-table.component.css"]
 })
-export class BasicTableComponent implements OnInit {
+export class BasicTableComponent implements AfterViewInit {
   displayedColumns: string[] = ["name", "flag", "area", "population"];
   aeroDisplayedCols: string[] = [
     "num",
@@ -760,10 +761,19 @@ export class BasicTableComponent implements OnInit {
     "aeropuerto",
     "viajeros"
   ];
+
   dataSource = COUNTRIES;
- dataAeropuertos = AEROPUERTOS;
+  //dataAeropuertos: MatTableDataSource<AEROPUERTOS>;
+  dataAeropuertos = new MatTableDataSource(AEROPUERTOS);
+
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngAfterViewInit(): void {
+    // actualizo el paginador despues de cargar la tabla
+    this.dataAeropuertos.paginator = this.paginator;
+  }
+
+  // ngOnInit(): void {}
 }
