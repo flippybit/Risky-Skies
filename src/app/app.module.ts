@@ -32,11 +32,13 @@ import { MatBadgeModule } from "@angular/material/badge";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatPaginatorModule } from '@angular/material';
+import { MatPaginatorModule, MatStepperModule, MatNativeDateModule} from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import {MatSelectModule} from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker'
 import { GoogleMapsModule } from "@angular/google-maps";
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // FIREBASE 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireStorageModule } from "@angular/fire/storage";
@@ -45,17 +47,27 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 //ENVIRONMENT VARIABLE 
 import { environment } from 'src/environments/environment';
+import { ModoCrearComponent } from './modo-crear/modo-crear.component';
+import { LandingViewComponent } from './landing-view/landing-view.component';
+import { TableCreatorComponent } from './table-creator/table-creator.component';
 
-// import {  } from '@angular/material';
-// import {  } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
     BasicTableComponent,
     MapsComponent,
-    TableFilteringComponent
+    TableFilteringComponent,
+    ModoCrearComponent,
+    LandingViewComponent,
+    TableCreatorComponent
   ],
   imports: [
+    MatAutocompleteModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatStepperModule,
     MatSlideToggleModule,
     MatPaginatorModule,
     AngularFirestoreModule,

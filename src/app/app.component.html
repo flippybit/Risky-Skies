@@ -12,55 +12,33 @@
   >
     <div class="tool-bar" fxFlex="40">
       <!-- <span>Crear Vuelos</span> -->
-      <mat-slide-toggle>Modo crear vuelos</mat-slide-toggle>
+      <mat-slide-toggle  (change)="testChange($event)" routerLink="modo" >Modo crear vuelos</mat-slide-toggle>
     </div>
 
-    <div class="titulo" fxFlexAlign="center" >
-  <i class="material-icons">airplanemode_active</i>
+    <div class="titulo" fxFlexAlign="center">
+      <i class="material-icons">airplanemode_active</i>
       <span>TOP SECRET</span>
-  <i class="material-icons">airplanemode_active</i>
-    </div>
-     
-    <div class="login-status" fxFlex="20" fxFlexAlign="end ">
-        <div class="row-container">
-        <!-- <span> Login status </span> -->
-  
-   
-      <mat-chip-list>  
-        <span>hora login</span>
-        <i class="material-icons">access_time</i>
-        <mat-chip>08:23</mat-chip>
-          </mat-chip-list>
-    </div>
+      <i class="material-icons">airplanemode_active</i>
     </div>
 
-   
+    <div class="login-status" fxFlex="20" fxFlexAlign="end ">
+      <div class="row-container">
+        <!-- <span> Login status </span> -->
+
+        <mat-chip-list>
+          <span>hora login</span>
+          <i class="material-icons">access_time</i>
+          <mat-chip>08:23</mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
   </mat-toolbar>
 
   <router-outlet>
-    <div class="container" fxLayout="row" fxLayoutGap="20px" fxFlexFill>
-      <!--  div table filtering column -->
-      <app-table-filtering
-        class="tabla-vuelos"
-        fxFlex="60"
-      ></app-table-filtering>
-
-      <div
-        class="shit-container"
-        fxLayout="column-reverse"
-        fxLayoutAlign="space-around stretch"
-        fxLayoutGap="20px"
-        fxFlex>
-
-        <!-- div tablaa aviones +`google maps  -->
-        <app-basic-table class="tabla-aviones"> </app-basic-table>
-
-        <!-- mapa de google maps  -->
-        <app-maps></app-maps>
-      </div>
-    </div>
+   
   </router-outlet>
-  <mat-toolbar>
+
+  <mat-toolbar class="footer">
     <span>My Application Footer</span>
   </mat-toolbar>
 </div>

@@ -747,12 +747,14 @@ const COUNTRIES: Country[] = [
   }
 ];
 
+
 @Component({
-  selector: "app-basic-table",
-  templateUrl: "./basic-table.component.html",
-  styleUrls: ["./basic-table.component.css"]
+  selector: 'app-table-creator',
+  templateUrl: './table-creator.component.html',
+  styleUrls: ['./table-creator.component.css']
 })
-export class BasicTableComponent implements AfterViewInit {
+export class TableCreatorComponent implements AfterViewInit {
+
   displayedColumns: string[] = ["name", "flag", "area", "population"];
   aeroDisplayedCols: string[] = [
     "num",

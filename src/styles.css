@@ -88,3 +88,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             font-size: 0.8rem;
             border: 2px solid burlywood;
         }
+
+        .footer {
+            border: 2px solid chartreuse;
+        }

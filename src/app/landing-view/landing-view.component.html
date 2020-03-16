@@ -1,0 +1,22 @@
+
+<!-- contenedor principal      -->
+<div class="top-container">
+  <div class="container" fxLayout="row" fxLayoutGap="20px" fxFlexFill>
+    <!--  div table filtering column -->
+    <app-table-filtering class="tabla-vuelos" fxFlex="60"></app-table-filtering>
+
+    <div
+      class="shit-container"
+      fxLayout="column-reverse"
+      fxLayoutAlign="space-around stretch"
+      fxLayoutGap="20px"
+      fxFlex
+    >
+      <!-- div tablaa aviones +`google maps  -->
+      <app-basic-table> </app-basic-table>
+
+      <!-- mapa de google maps  -->
+      <app-maps></app-maps>
+    </div>
+  </div>
+</div>
