@@ -3,8 +3,4 @@
 # Risky-Skies
 >Una App para una agencia de viajes fuera de lo comun
 
->:mag:[Descripcion del proyecto 2020](https://github.com/flippybit/flirty-flights/files/4264862/DescripcionProyecto.2020.1.pdf)
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
-
 ## Enlace a la demo :octocat:
